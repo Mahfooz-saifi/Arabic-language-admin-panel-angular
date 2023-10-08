@@ -1,0 +1,162 @@
+<div class="container mt-3 " >
+  <div class="card p-3">
+    <form action="">
+      <div class="row mt-2 " [dir]="'dir' | translate">
+
+        <strong> <p class="bg-secondary p-2">{{'UserInfo.ApproveClearingAgency'| translate}}</p> </strong>
+
+        <div class="form-check mx-3 ">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              {{'UserInfo.SearchCriteria' | translate}}
+            </label>
+          </div>
+          <hr class="">
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label>{{'UserInfo.CRNumber' | translate}}</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="">{{'UserInfo.Status' |translate}}</label>
+        <select class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label>{{'UserInfo.AgencyName' | translate}}</label>
+  
+            <input type="text" class="form-control" name="" id="">
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label for="">{{'UserInfo.EstablishementID' | translate}}</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label for="">{{'UserInfo.CustomCode' | translate}}</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="form-group">
+              <label for="">{{'UserInfo.CreationDateFrom' | translate}}</label>
+              <input type="text" class="form-control" name="" id="">
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="form-group">
+              <label for="">{{'UserInfo.CreationDateTo' | translate}}</label>
+              <input type="text" class="form-control" name="" id="">
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+              <label for="">{{'UserInfo.ClearingAgencyType' | translate}}</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>All</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+
+
+            <div class="my-3 d-flex justify-content-end">
+                <button class="btn btn-success mx-2">{{'UserInfo.Search'|translate}}</button>
+                <button class="btn btn-danger">{{'UserInfo.Reset'| translate}}</button>
+            </div>
+    
+      </div>
+    </form>
+  </div>
+
+  <hr>
+<!-- </div> -->
+
+
+
+  <div class=" card rounded table-responsive" [dir]="'dir' | translate">
+    <table class="table table table-striped table-hover">
+        <thead>
+            <tr>
+              <th scope="col">{{'UserInfo.S/No' | translate}}</th>
+              <th scope="col">{{'UserInfo.EstablishementID' | translate}}</th>
+              <th scope="col">{{'UserInfo.CRNumber' | translate}}</th>
+              <th scope="col">{{'UserInfo.CustomerCode' | translate}}</th>
+              <th scope="col">{{'UserInfo.AgencyName' | translate}}</th>
+              <th scope="col">{{'UserInfo.Status' | translate}}</th>
+              <th scope="col">{{'UserInfo.CreationDate' | translate}}</th>
+              <th scope="col">{{'UserInfo.ClearingAgencyType' | translate}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">{{'UserInfo.1' | translate}}</th>
+              <td>12356784</td>
+              <td></td>
+              <td>{{'UserInfo.L2775' | translate}}</td>
+              <td>{{'UserInfo.newncm2' | translate}}</td>
+              <td>{{'UserInfo.PendingApproval' | translate}}</td>
+              <td>27/08/2023</td>
+              <td>{{'UserInfo.Government'|translate}}</td>
+            </tr>
+            <tr>
+                <th scope="row">{{'UserInfo.2'| translate}}</th>
+                <td>34555558</td>
+                <td></td>
+                <td>{{'UserInfo.L2774' | translate}}</td>
+                <td>{{'UserInfo.AngularFZc' | translate}}</td>
+                <td>{{'UserInfo.Rejected' | translate}}</td>
+                <td>27/08/2023</td>
+                <td>{{'UserInfo.Private'| translate}}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{'UserInfo.3' | translate}}</th>
+                <td>32321324</td>
+                <td></td>
+                <td>{{'UserInfo.L2770' | translate}}</td>
+                <td>{{'UserInfo.nongov' | translate}}</td>
+                <td>{{'UserInfo.PendingApproval' | translate}}</td>
+                <td>25/08/2023</td>
+                <td>{{'UserInfo.Private' | translate}}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{'UserInfo.4'|translate}}</th>
+                <td>97876532</td>
+                <td></td>
+                <td>{{'UserInfo.L2769' | translate}}</td>
+                <td>{{'UserInfo.newncmlegancy' | translate}}</td>
+                <td>{{'UserInfo.PendingApproval' | translate}}</td>
+                <td>24/08/2023</td>
+                <td>{{'UserInfo.Government' | translate}}</td>
+              </tr>
+        
+          </tbody>
+
+       
+    </table>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-end mx-3">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">{{'UserInfo.Previous'| translate}}</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">{{'UserInfo.Next'|translate}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

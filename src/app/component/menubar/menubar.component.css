@@ -1,0 +1,39 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+ 
+.language-drop{
+  font-size:15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.language-drop:hover{
+  background-color: black;
+  color: red;
+}
+.full-width {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
+.active{
+  background-color: rgb(238, 121, 101);
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+}
+.submenu.expanded {
+  transform: scaleY(1);
+}

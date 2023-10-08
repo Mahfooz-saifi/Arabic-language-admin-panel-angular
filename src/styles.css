@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;
+    font-size: 14px !important;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+
+    /* overflow-y: hidden; */
+    font-size: 14px !important;
+}
+
+.mat-drawer-inner-container{
+    background-color: rgb(180, 237, 255);
+}
+.mdc-list-item__primary-text {
+    display: flex;
+    align-items: center;
+}

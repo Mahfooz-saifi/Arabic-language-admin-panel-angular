@@ -1,0 +1,97 @@
+<mat-toolbar color="primary" class="mat-elevation-z8" [dir]="'dir' | translate">
+    <button (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{'UserInfo.GoodMorning'|translate}}</span>
+    <span class="example-spacer"></span>
+
+    <button  mat-button>{{'UserInfo.Home'| translate}}</button>
+    <button  mat-button>{{'UserInfo.ContactUs'| translate}}</button>
+    <select class="language-drop" name="" (change)="translate($event)" [dir]="'dir' | translate">
+        <option value="en">English</option>
+        <option value="ar">Arabic</option>
+    </select>
+
+    <button  mat-button>{{'UserInfo.LogOut' | translate}}</button>
+    <!-- <button (click)="badgevisibility()"  mat-icon-button>
+        <mat-icon matBadgeColor="accent" matBadge="15" [matBadgeHidden]="badgevisible" matBadgeSize="small">notifications</mat-icon>
+    </button> -->
+</mat-toolbar>
+<mat-drawer-container autosize [dir]="'dir' | translate">
+    <mat-drawer #drawer opened="true" mode="side" position="start" >
+        <mat-nav-list>
+                       <mat-list-item class="parent">
+                <!-- <mat-icon mat-list-icon>home</mat-icon> -->
+                <span class="full-width" > {{'UserInfo.SystemAdministration' | translate}}</span>
+                           </mat-list-item>
+            <!-- <mat-list-item>
+                <button routerLink="" mat-button>
+                    <mat-icon>home</mat-icon> Home
+                </button>
+            </mat-list-item>
+            
+             -->
+            <mat-list-item class="parent">
+                <!-- <mat-icon mat-list-icon>home</mat-icon> -->
+                <span class="full-width" >{{'UserInfo.PrivateWarehouses' |translate}}</span>
+                <mat-icon class="menu-button drop-btn" [ngClass]="{'' : showSubmenu}" *ngIf="isExpanded || isShowing">
+                    expand_more</mat-icon>
+            </mat-list-item>
+
+            <mat-list-item class="parent">
+                <!-- <mat-icon mat-list-icon>home</mat-icon> -->
+                <span class="full-width" >{{'UserInfo.SportsAuthorization'|translate}}</span>
+                <mat-icon class="menu-button drop-btn" [ngClass]="{'' : showSubmenu}" *ngIf="isExpanded || isShowing">
+                    expand_more</mat-icon>
+            </mat-list-item>
+
+            <mat-nav-list>
+
+                <mat-list-item (click)="showSubmenu = showSubmenu" class="parent">
+                    <!-- <mat-icon mat-list-icon>home</mat-icon> -->
+                    <span class="full-width" *ngIf="isExpanded || isShowing">{{'UserInfo.Registration' | translate}}</span>
+                    <mat-icon class="menu-button drop-btn" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">
+                        expand_more</mat-icon>
+                </mat-list-item>
+                <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
+                    <a mat-list-item ><span class="full-width"> {{'UserInfo.AccountManagement'|translate}}</span></a>
+                    <a mat-list-item ><span class="full-width">{{'UserInfo.ActivateAccount' | translate}}</span></a>
+                    <a mat-list-item ><span class="full-width">{{'UserInfo.UserManagement'|translate}}</span></a>
+                    <a mat-list-item class="active" routerLink="/approve-agency"><span class="full-width">{{'UserInfo.ApproveClearingAgency'| translate}}</span></a>
+                    <a mat-list-item ><span class="full-width">{{'UserInfo.ApproveClearingAgent'| translate}}</span></a>
+                    <a mat-list-item ><span class="full-width">{{'UserInfo.ResetPassword/UnlockUser' | translate}}</span></a>
+                    <a mat-list-item ><span class="full-width">{{'UserInfo.PrintUserIDCard'| translate}}</span></a>
+                    <a mat-list-item ><span class="full-width">{{'UserInfo.CreateRequest'|translate}}</span></a>
+                </div>
+            </mat-nav-list>
+    
+
+            <mat-list-item class="parent">
+                <!-- <mat-icon mat-list-icon>home</mat-icon> -->
+                <span class="full-width" >{{'UserInfo.DetainedGoods' | translate}}</span>
+                <mat-icon class="menu-button drop-btn" [ngClass]="{'' : showSubmenu}" *ngIf="isExpanded || isShowing">
+                    expand_more</mat-icon>
+            </mat-list-item>
+            <mat-list-item class="parent">
+                <!-- <mat-icon mat-list-icon>home</mat-icon> -->
+                <span class="full-width" >{{'UserInfo.Declaration'|translate}}</span>
+                <mat-icon class="menu-button drop-btn" [ngClass]="{'' : showSubmenu}" *ngIf="isExpanded || isShowing">
+                    expand_more</mat-icon>
+            </mat-list-item>
+            <mat-list-item class="parent">
+                <!-- <mat-icon mat-list-icon>home</mat-icon> -->
+                <span class="full-width" >{{'UserInfo.TariffManagement'|translate}}</span>
+                <mat-icon class="menu-button drop-btn" [ngClass]="{'' : showSubmenu}" *ngIf="isExpanded || isShowing">
+                    expand_more</mat-icon>
+            </mat-list-item>
+            </mat-nav-list>
+
+        
+    </mat-drawer>
+    <mat-drawer-content style="background-color: #e0dede;">
+        <div class="mb-4">
+
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
